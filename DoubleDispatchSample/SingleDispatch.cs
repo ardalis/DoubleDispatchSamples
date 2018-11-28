@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using Xunit;
 
 namespace DoubleDispatchSample.SingleDispatch
 {
@@ -32,12 +31,13 @@ namespace DoubleDispatchSample.SingleDispatch
             var figure = new Figure(sb);
 
             figure.Draw(new Pen());
-            figure.Draw(figure);
+            object reallyAPen = new Pen();
+            figure.Draw(reallyAPen);
 
             var result = sb.ToString();
 
             Assert.Equal(@"Figure drawn in pen." + Environment.NewLine +
-                          "Figure drawn with something." + Environment.NewLine, result);
+                            "Figure drawn with something." + Environment.NewLine, result);
 
         }
     }

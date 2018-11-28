@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using Xunit;
 
 namespace DoubleDispatchSample.DoubleDispatch
 {
@@ -55,7 +54,7 @@ namespace DoubleDispatchSample.DoubleDispatch
             var result = sb.ToString();
 
             Assert.Equal(@"Figure drawn in red pen." + Environment.NewLine +
-                          "Figure drawn in black pen." + Environment.NewLine, result);
+                            "Figure drawn in black pen." + Environment.NewLine, result);
 
         }
     }
